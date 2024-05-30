@@ -1,0 +1,47 @@
+\chapter{Rings}
+
+
+\section{Rings and Homomorphisms}
+\subsection{Exercises}
+\subsubsection{1}
+\begin{enumerate}[(a)]
+	\item
+	\begin{graybox}
+		Let $G$ be an (additive) abelian group. Define an operation of multiplication in $G$ by $ab = 0$ (for all $a, b\in G$). Then $G$ is a ring.
+	\end{graybox}
+	\begin{solution}
+		By assumption, $(G, +)$ is an abelian group so condition (i) is satisfied. Condition (ii) is satisfied since
+		\begin{align*}
+			(ab)c &= 0c\\
+			&= 0\\
+			&= a0\\
+			&= a(bc)
+		\end{align*}
+		for any $a,b,c \in G$. Finally,
+		\begin{align*}
+			a(b + c) &= 0\\
+			&= 0 + 0\\
+			&= ab + ac
+		\end{align*}
+		is true for every $a,b,c \in G$ and an analogous argument shows the right distributive law holds as well. Thus condition (iii) is satisfied and so by definition, $G$ is a ring. 
+	\end{solution}
+	\item
+	\begin{graybox}
+		Let $S$ be the set of all subsets of some fixed set $U$. For $A, B \in S$, define $A + B = (A \setminus B) \cup (B \setminus A)$ and $AB = A \cap B$. Then $S$ is a ring
+	\end{graybox}
+	\begin{solution}
+		First, we show that $(S, +)$ is an abelian group. 
+	\end{solution}
+	\begin{lightgraybox}
+		Is $S$ commutative?
+	\end{lightgraybox}
+	\begin{solution}
+		content...
+	\end{solution}
+	\begin{lightgraybox}
+		Does it have an identity?
+	\end{lightgraybox}
+	\begin{solution}
+		content...
+	\end{solution}
+\end{enumerate}
