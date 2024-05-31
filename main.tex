@@ -72,7 +72,7 @@
 
 \newenvironment{graybox}{%
 	\begin{lrbox}{\grayboxcontent}%
-		\begin{minipage}{\textwidth}%
+		\begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule-2pt}%
 		}{%
 		\end{minipage}%
 	\end{lrbox}%
@@ -84,7 +84,7 @@
 %Light gray box is for subproblems
 \newenvironment{lightgraybox}{%
 	\begin{lrbox}{\lightgrayboxcontent}%
-		\begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule}%
+		\begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule-2pt}%
 		}{%
 		\end{minipage}%
 	\end{lrbox}%

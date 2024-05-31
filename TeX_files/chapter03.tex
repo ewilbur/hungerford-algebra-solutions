@@ -12,63 +12,27 @@
 		Let $G$ be an (additive) abelian group. Define an operation of multiplication in $G$ by $ab = 0$ (for all $a, b\in G$). Then $G$ is a ring.
 	\end{graybox}
 	\begin{solution}
-		By assumption, $(G, +)$ is an abelian group so condition (i) is satisfied. Condition (ii) is satisfied since
-		\begin{align*}
-			(ab)c &= 0c\\
-			&= 0\\
-			&= a0\\
-			&= a(bc)
-		\end{align*}
-		for any $a,b,c \in G$. Finally,
-		\begin{align*}
-			a(b + c) &= 0\\
-			&= 0 + 0\\
-			&= ab + ac
-		\end{align*}
-		is true for every $a,b,c \in G$ and an analogous argument shows the right distributive law holds as well. Thus condition (iii) is satisfied and so by definition, $G$ is a ring. 
+		content...
 	\end{solution}
 	\item
 	\begin{graybox}
 		Let $S$ be the set of all subsets of some fixed set $U$. For $A, B \in S$, define $A + B = (A \setminus B) \cup (B \setminus A)$ and $AB = A \cap B$. Then $S$ is a ring
 	\end{graybox}
 	\begin{solution}
-		We begin by showing that $(S, +)$ is an abelian group. To do this, first note that an element $x \in A + B$ if and only if $(x \in A) \xor (x \in B)$ where $\xor$ denotes the \textit{exclusive or} operation in boolean algebra. Indeed, if $x \in A + B$ then either $x \in A \setminus B$ or $x \in B \setminus A$. Without loss of generality, suppose $x \in A \setminus B$ as an analogous argument works for the alternative case. In this case, it must be that $x \in A$ and $x \notin B$ hence $x \in A \xor x \in B$. Conversely, if $(x \in A) \xor (x \in B)$ then either $x \in A$ and $x \notin B$ or $x \in B$ and $x \notin A$. In either case, $x \in (A \setminus B) \cup (B \setminus A)$ and hence the statement is proved. With this, associativity follows from the associativity of $\xor$ in boolean algebra. Furthermore, it follows from this that we have identity $\emptyset$, inverse $U - A$ for every subset $A \subseteq U$, and commutativity from the commutativity of $\xor$. Thus, $(S, +)$ is an abelian group.\\
-		\\
-		We see that 
-		\begin{align*}
-			(AB)C &= (A \cap B)C\\
-			&= (A \cap B)\cap C\\
-			&= A \cap (B \cap C)\\
-			&= A \cap (BC)\\
-			&= A(BC)
-		\end{align*}
-		for all $A, B, C \subseteq U$, hence multiplication is associative. 
-		% TODO distributive law
+		content...
 	\end{solution}
 	\begin{lightgraybox}
 		Is $S$ commutative?
 	\end{lightgraybox}
+	
 	\begin{solution}
-		Yes because
-		\begin{align*}
-			AB &= A \cap B\\
-			&= B \cap A\\
-			&= BA
-		\end{align*}
-		holds for all $A, B \subseteq U$.
+		content...
 	\end{solution}
 	\begin{lightgraybox}
 		Does it have an identity?
 	\end{lightgraybox}
 	\begin{solution}
-		Yes because
-		\begin{align*}
-			AU &= A \cap U\\
-			&= A\\
-			&= U\cap A\\
-			&= UA
-		\end{align*}
-		holds for all $A \subseteq U$.
+		content...
 	\end{solution}
 \end{enumerate}
 
