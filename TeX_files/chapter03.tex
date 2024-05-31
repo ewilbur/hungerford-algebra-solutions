@@ -2,8 +2,10 @@
 
 
 \section{Rings and Homomorphisms}
+
 \subsection{Exercises}
-\subsubsection{1}
+
+\subsubsection*{1}
 \begin{enumerate}[(a)]
 	\item
 	\begin{graybox}
@@ -30,18 +32,431 @@
 		Let $S$ be the set of all subsets of some fixed set $U$. For $A, B \in S$, define $A + B = (A \setminus B) \cup (B \setminus A)$ and $AB = A \cap B$. Then $S$ is a ring
 	\end{graybox}
 	\begin{solution}
-		First, we show that $(S, +)$ is an abelian group. 
+		We begin by showing that $(S, +)$ is an abelian group. To do this, first note that an element $x \in A + B$ if and only if $(x \in A) \xor (x \in B)$ where $\xor$ denotes the \textit{exclusive or} operation in boolean algebra. Indeed, if $x \in A + B$ then either $x \in A \setminus B$ or $x \in B \setminus A$. Without loss of generality, suppose $x \in A \setminus B$ as an analogous argument works for the alternative case. In this case, it must be that $x \in A$ and $x \notin B$ hence $x \in A \xor x \in B$. Conversely, if $(x \in A) \xor (x \in B)$ then either $x \in A$ and $x \notin B$ or $x \in B$ and $x \notin A$. In either case, $x \in (A \setminus B) \cup (B \setminus A)$ and hence the statement is proved. With this, associativity follows from the associativity of $\xor$ in boolean algebra. Furthermore, it follows from this that we have identity $\emptyset$, inverse $U - A$ for every subset $A \subseteq U$, and commutativity from the commutativity of $\xor$. Thus, $(S, +)$ is an abelian group.\\
+		\\
+		We see that 
+		\begin{align*}
+			(AB)C &= (A \cap B)C\\
+			&= (A \cap B)\cap C\\
+			&= A \cap (B \cap C)\\
+			&= A \cap (BC)\\
+			&= A(BC)
+		\end{align*}
+		for all $A, B, C \subseteq U$, hence multiplication is associative. 
+		% TODO distributive law
 	\end{solution}
 	\begin{lightgraybox}
 		Is $S$ commutative?
 	\end{lightgraybox}
 	\begin{solution}
-		content...
+		Yes because
+		\begin{align*}
+			AB &= A \cap B\\
+			&= B \cap A\\
+			&= BA
+		\end{align*}
+		holds for all $A, B \subseteq U$.
 	\end{solution}
 	\begin{lightgraybox}
 		Does it have an identity?
 	\end{lightgraybox}
 	\begin{solution}
+		Yes because
+		\begin{align*}
+			AU &= A \cap U\\
+			&= A\\
+			&= U\cap A\\
+			&= UA
+		\end{align*}
+		holds for all $A \subseteq U$.
+	\end{solution}
+\end{enumerate}
+
+
+\section{Ideals}
+\subsection{Exercises}
+
+\subsubsection*{1}
+\begin{graybox}
+	The set of all nilpotent elements in a commutative ring forms an ideal.
+\end{graybox}
+\begin{solution}
+	content...
+\end{solution}
+
+\subsubsection*{2}
+\begin{graybox}
+	Let $I$ be an ideal in a commutative ring $R$ and let $\text{Rad } I = \{r \in R \mid r^n \in I \text{ for some } n\}$. Show that $\text{Rad } I$ is an ideal.
+\end{graybox}
+\begin{solution}
+	content...
+\end{solution}
+
+\subsubsection*{3}
+\begin{graybox}
+	If $R$ is a ring and $a \in R$, then $J = \{r \in R \mid ra = 0\}$ is a left ideal and $K = \{r \in R \mid ar = 0\}$ is a right ideal in $R$.
+\end{graybox}
+\begin{solution}
+	content...
+\end{solution}
+
+\subsubsection*{4}
+\begin{graybox}
+	If $I$ is a left ideal of $R$, then $A(I) = \{r \in R \mid rx = 0, \forall x \in I\}$ is an ideal in $R$.
+\end{graybox}
+\begin{solution}
+	content...
+\end{solution}
+
+\subsubsection*{5}
+\begin{graybox}
+	If $I$ is an ideal in a ring $R$, let $[R:I]$ = $\{r \in R \mid xr \in I, \forall x \in R\}$. Prove that $[R:I]$ is an ideal of $R$ which contains $I$.
+\end{graybox}
+\begin{solution}
+	content...
+\end{solution}
+
+\subsubsection*{6}
+\begin{enumerate}[(a)]
+	\item
+	\begin{graybox}
+		The center of the ring $S$ of all $2\times 2$ matrices over a field $F$ consists of all matrices of the form 
+		$
+		\begin{pmatrix}
+			a & 0\\
+			0 & a
+		\end{pmatrix}
+		$
+	\end{graybox}
+	\begin{solution}
+		content...
+	\end{solution}
+	
+	\item
+	\begin{graybox}
+		The center of $S$ is not an ideal in $S$.
+	\end{graybox}
+	\begin{solution}
+		content...
+	\end{solution}
+	
+	\item
+	\begin{graybox}
+		What is the center of the ring of all $n \times n$ matrices over a division ring?
+	\end{graybox}
+	\begin{solution}
 		content...
 	\end{solution}
 \end{enumerate}
+
+\subsubsection*{7}
+\begin{enumerate}[(a)]
+	\item 
+	\begin{graybox}
+		A ring $R$ with identity is a division ring if and only if $R$ has no proper left ideals.
+	\end{graybox}
+	\begin{solution}
+		content...
+	\end{solution}
+	
+	\item
+	\begin{graybox}
+		If $S$ is a ring (possibly without identity) with no proper left ideals, then either $S^2 = 0$ or $S$ is a division ring.
+	\end{graybox}
+	\begin{solution}
+		content...
+	\end{solution}
+\end{enumerate}
+
+\subsubsection*{8}
+\begin{graybox}
+	Let $R$ be a ring with identity and $S$ the ring of all $n \times n$ matrices over $R$. Then $J$ is an ideal of $S$ if and only if $J$ is the ring of all $n \times n$ matrices over $I$ for some ideal $I$ in $R$.
+\end{graybox}
+\begin{solution}
+	content...
+\end{solution}
+
+
+\subsubsection*{9}
+\begin{graybox}
+	Let $S$ be the ring of all $n \times n$ matrices over a division ring $D$.
+\end{graybox}
+\begin{enumerate}[(a)]
+	\item 
+	\begin{lightgraybox}
+		$S$ has no proper ideals (that is, 0 is a maximal ideal.)
+	\end{lightgraybox}
+	\begin{solution}
+		content...
+	\end{solution}
+	
+	\item
+	\begin{lightgraybox}
+		0 is a prime ideal which does not satisfy condition (1) of Theorem 2.15.
+	\end{lightgraybox}
+	\begin{solution}
+		content...
+	\end{solution}
+\end{enumerate}
+
+\subsubsection*{10}
+\begin{enumerate}[(a)]
+	\item 
+	\begin{graybox}
+		Show that $\ZZ$ is a principal ideal ring
+	\end{graybox}
+	\begin{solution}
+		content...
+	\end{solution}
+	\item
+	\begin{graybox}
+		Every homomorphic image of a principal ideal ring is also a principal ideal ring.
+	\end{graybox}
+	\begin{solution}
+		content...
+	\end{solution}
+	\item
+	\begin{graybox}
+		$\ZZ_m$ is a principal ideal ring for every $m > 0$.
+	\end{graybox}
+	\begin{solution}
+		content...
+	\end{solution}
+\end{enumerate}
+
+\subsubsection*{11}
+\begin{graybox}
+	If $N$ is the ideal of all nilpotent elements in a commutative ring $R$, then $R / N$ is a ring with no nonzero nilpotent elements.
+\end{graybox}
+\begin{solution}
+	content...
+\end{solution}
+
+\subsubsection*{12}
+\begin{graybox}
+	Let $R$ be a ring without identity and with no zero divisors. Let $S$ be the ring whose additive group is $R \times \ZZ$ as in the proof of Theorem 1.10. Let $A = \{(r,n) \in S \mid rx + nx = 0, \forall x \in R\}$.
+\end{graybox}
+\begin{enumerate}[(a)]
+	\item
+	\begin{lightgraybox}
+		$A$ is an ideal in $S$.
+	\end{lightgraybox}
+	\begin{solution}
+		content...
+	\end{solution}
+	
+	\item
+	\begin{lightgraybox}
+		$S / A$ has an identity and contains a subring isomorphic to $R$.
+	\end{lightgraybox}
+	\begin{solution}
+		content...
+	\end{solution}
+	
+	\item
+	\begin{lightgraybox}
+		$S / A$ has no zero divisors. 
+	\end{lightgraybox}
+	\begin{solution}
+		content...
+	\end{solution}
+\end{enumerate}
+
+\subsubsection*{13}
+\begin{graybox}
+	Let $f : R \to S$ be a homomorphism of rings, $I$ an ideal in $R$, and $J$ an ideal in $S$.
+\end{graybox}
+\begin{enumerate}[(a)]
+	\item 
+	\begin{lightgraybox}
+		$f^{-1}(J)$ is an ideal in $R$ that contains $\ker f$.
+	\end{lightgraybox}
+	\begin{solution}
+		content...
+	\end{solution}
+	
+	\item
+	\begin{lightgraybox}
+		If $f$ is an epimorphism, then $f(I)$ is an ideal in $S$. If $f$ is not surjective, $f(I)$ need not be an ideal in $S$.
+	\end{lightgraybox}
+	\begin{solution}
+		content...
+	\end{solution}
+\end{enumerate}
+
+\subsubsection*{14}
+\begin{graybox}
+	If $P$ is an ideal in a not necessarily commutative ring $R$, then the following conditions are equivalent.
+	\begin{enumerate}[(a)]
+		\item $P$ is a prime ideal.
+		\item If $r,s \in R$ are such that $rRs \subset P$, then $r \in P$ or $s in P$.
+		\item If $(r)$ and $(s)$ are principal ideals of $R$ such that $(r)(s) \subset P$, then $r \in P$ or $s \in P$.
+		\item If $U$ and $V$ are right ideals in $R$ such that $UV \subset P$, then $U \subset P$ or $V \subset P$.
+		\item If $U$ and $V$ are left ideals in $R$ such that $UV \subset P$, then $U \subset P$ or $V \subset P$.
+	\end{enumerate}
+
+\end{graybox}
+	\begin{solution}
+	content...
+\end{solution}
+
+\subsubsection*{15}
+\begin{graybox}
+	The set consisting of zero and all zero divisors in a commutative ring with identity contains at least one prime ideal.
+\end{graybox}
+\begin{solution}
+	content...
+\end{solution}
+
+\subsubsection*{16}
+\begin{graybox}
+	Let $R$ be a commutative ring with identity and suppose that the ideal $A$ of $R$ is contained in a finite union of prime ideals $P_1 \cup \dots \cup P_n$. Show that $A \subset P_i$ for some $i$.
+\end{graybox}
+\begin{solution}
+	content...
+\end{solution}
+
+\subsubsection*{17}
+\begin{graybox}
+	Let $f : R \to S$ be an epimorphism of rings with kernel $K$.
+\end{graybox}
+\begin{enumerate}[(a)]
+	\item 
+	\begin{lightgraybox}
+		If $P$ is a prime ideal in $R$ that contains $K$, then $f(P)$ is a prime ideal in $S$.
+	\end{lightgraybox}
+	\begin{solution}
+		content...
+	\end{solution}
+	
+	\item
+	\begin{lightgraybox}
+		If $Q$ is a prime ideal in $S$, then $f^{-1}(Q)$ is a prime ideal in $R$ that contains $K$.
+	\end{lightgraybox}
+	\begin{solution}
+		content...
+	\end{solution}
+	
+	\item
+	\begin{lightgraybox}
+		There is a one-to-one correspondence between the set of all prime ideals in $R$ that contain $K$ and the set of all prime ideals in $S$, given by $P \mapsto f(P)$. 
+	\end{lightgraybox}
+	\begin{solution}
+		content...
+	\end{solution}
+	
+	\item
+	\begin{lightgraybox}
+		If $I$ is an ideal in a ring $R$, then every ideal in $R / I$ is of the form $P / I$, where $P$ is a prime ideal in $R$ that contains $I$.
+	\end{lightgraybox}
+	\begin{solution}
+		content...
+	\end{solution}
+\end{enumerate}
+
+\subsubsection*{18}
+\begin{graybox}
+	An ideal $M \neq R$ in a commutative ring $R$ with identity is maximal if and only if for every $r \in R \setminus M$, there exists $x \in R$ such that $I_R - rx \in M$. 
+\end{graybox}
+\begin{solution}
+	content...
+\end{solution}
+
+\subsubsection*{19}
+\begin{graybox}
+	The ring $E$ of even integers contains a maximal ideal $M$ such that $E / M$ is \textit{not} a field.
+\end{graybox}
+\begin{solution}
+	content...
+\end{solution}
+
+\subsubsection*{20}
+\begin{graybox}
+	In the ring $\ZZ$ the following conditions on a nonzero ideal $I$ are equivalent
+	\begin{enumerate}[(i)]
+		\item $I$ is prime
+		\item $I$ is maximal
+		\item $I = (p)$ with $p$ prime. 
+	\end{enumerate}
+\end{graybox}
+\begin{solution}
+	content...
+\end{solution}
+
+\subsubsection*{21}
+\begin{graybox}
+	Determine all prime and maximal ideals in the ring $\ZZ_m$.
+\end{graybox}
+\begin{solution}
+	content...
+\end{solution}
+
+\subsubsection*{22}
+\begin{enumerate}[(a)]
+	\item 
+	\begin{graybox}
+		If $R_1,\dots,R_n$ are rings with identity and $I$ is an ideal in $R_1 \times \dots \times R_n$, then $I = A_1 \times \dots \times A_m$, where each $A_i$ is an ideal in $R_i$.
+	\end{graybox}
+	\begin{solution}
+		content...
+	\end{solution}
+	
+	\item
+	\begin{graybox}
+		Show that the conclusion of (a) need not hold if the rings $R_i$ do not have identities.
+	\end{graybox}
+	\begin{solution}
+		content...
+	\end{solution}
+\end{enumerate}
+
+\subsubsection*{23}
+\begin{graybox}
+	An element $e$ in a ring $R$ is said to be \textbf{idempotent} if $e^2 = e$. An element of the center of the ring $R$ is said to be \textbf{central}. If $e$ is a central idempotent in a ring $R$ with identity, then 
+\end{graybox}
+\begin{enumerate}[(a)]
+	\item 
+	\begin{lightgraybox}
+		$1_r - e$ is a central idempotent
+	\end{lightgraybox}
+	\begin{solution}
+		content...
+	\end{solution}
+	
+	\item
+	\begin{lightgraybox}
+		$eR$ and $(I_r - e)R$ are ideals in $R$ such that $R = eR \times (1_R - e)R$.
+	\end{lightgraybox}
+	\begin{solution}
+		content...
+	\end{solution}
+\end{enumerate}
+
+\subsubsection*{24}
+\begin{graybox}
+	Idempotent elements $e_1,\dots,e_n$ in a ring $R$ are said to be \textbf{orthogonal} if $e_ie_j = 0$ for $i \neq j$. If $R,R_1,\dots,R_n$ are rings with identity, then the following conditions are equivalent:
+	\begin{enumerate}[(a)]
+		\item $R \cong R_1 \times \dots \times R_n$
+		\item $R$ contains a set of orthogonal central idempotents $\{e_1,\dots, e_n\}$ such that $e_1 + e_2 + \dots + e_n = 1_R$ and $e_iR \cong R_i$ for each $i$.
+		\item $R$ is the internal direct product $R = A_1 \times \dots \times A_n$ where each $A_i$ is an ideal of $R$ such that $A_i \cong R_i$.
+	\end{enumerate}
+\end{graybox}
+\begin{solution}
+	content...
+\end{solution}
+
+\subsubsection*{25}
+\begin{graybox}
+	If $m \in \ZZ$ has a prime decomposition $m = p_1^{k_1}\dots p_t^{k_t}$ ($k_i > 0$; $p_i$ distinct primes) then there is an isomorphism of rings $\ZZ_m \cong Z_{p_1^{k_1}} \times \dots \times Z_{p_t^{k_t}}$
+\end{graybox}
+\begin{solution}
+	content...
+\end{solution}
+
+\subsubsection*{26}
+\begin{graybox}
+	If $R = \ZZ, A_1 = (6)$ and $A_2 = (4)$, then the map $\theta : R/A_i \cap A_2 \to R/A_1 \times R/A_2$ of Corollary 2.27 is not surjective.
+\end{graybox}
+\begin{solution}
+	content...
+\end{solution}
