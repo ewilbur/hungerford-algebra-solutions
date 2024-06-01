@@ -122,7 +122,19 @@
 	A finite ring with more than one element and no zero divisors is a division ring. (Special case: a finite integral domain is a field.)
 \end{graybox}
 \begin{solution}
-	content...
+	First, we show that a finite ring $R$ with more than one element and no zero divisors must have a unit. Let $a \in R$ be some arbitrary nonzero element. Consider the function $f_a : R \to R$ given by the map $x \mapsto ax$. This map is a group homomorphism of the underlying abelian group. Indeed, for $b,c \in R$ we have
+	\begin{align*}
+		f_a(b + c) &= a(b + c)\\
+		&= ab + ac\\
+		&= f_a(b) + f_a(c).
+	\end{align*}
+	Observe the kernel of $f_a$ is trivial since if $f_a(b) = 0$ for some $b \in R$, then $ab = 0$, but since $a$ is nonzero and $R$ has no zero divisors, it must be that $b = 0$. Thus $f_a$ has trivial kernel. But this implies that $f_a$ is injective, and since $R$ is finite, $f_a$ is surjective as well, hence $f_a$ is a bijection. So then $f_a$ is a permutation of $R$, which means Corollary I.6.4 implies that said permutation is of finite order. But with this being true, it follows that there is some integer $n$ so that the composition
+	$$
+		\overbrace{f_a \circ \dots \circ f_a}^{n-\text{times}} = \text{id}.
+	$$
+	Yet, this means that $a^n$ must be an identity of $R$ - hence $a^n$ must be the identity of $R$ by uniqueness.\\
+	\\
+	With $a$ still arbitrary, we identify that $a^n = a^{n-1}a = 1_R$, hence every nonzero element of $R$ has an inverse. Thus $R$ is a division ring.4
 \end{solution}
 
 
