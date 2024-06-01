@@ -80,10 +80,10 @@
 	hence we have
 	\begin{align*}
 		0 &= ab + ba\\
-		-ba &= ab\\
-		(-ba)^2 &= ab\\
-		(ba)^2 &= ab & \text{Theorem 1.2 (iii)}\\
-		ba &= ab.
+		ab &= -ba\\
+		&= (-ba)^2\\
+		&= (ba)^2 & \text{Theorem 1.2 (iii)}\\
+		&= ba
 	\end{align*}
 	Therefore $R$ is commutative.\\
 	\\
@@ -128,13 +128,13 @@
 		&= ab + ac\\
 		&= f_a(b) + f_a(c).
 	\end{align*}
-	Observe the kernel of $f_a$ is trivial since if $f_a(b) = 0$ for some $b \in R$, then $ab = 0$, but since $a$ is nonzero and $R$ has no zero divisors, it must be that $b = 0$. Thus $f_a$ has trivial kernel. But this implies that $f_a$ is injective, and since $R$ is finite, $f_a$ is surjective as well, hence $f_a$ is a bijection. So then $f_a$ is a permutation of $R$, which means Corollary I.6.4 implies that said permutation is of finite order. But with this being true, it follows that there is some integer $n$ so that the composition
+	Observe the kernel of $f_a$ is trivial since if $f_a(b) = 0$ for some $b \in R$, then $f_a(b) = ab = 0$, but since $a$ is nonzero and $R$ has no zero divisors, it must be that $b = 0$. Thus $f_a$ has trivial kernel. But this implies that $f_a$ is injective, and since $R$ is finite, $f_a$ is surjective as well, hence $f_a$ is a bijection. So then $f_a$ is a permutation of $R$, which means Corollary I.6.4 implies that said permutation is of finite order. But with this being true, it follows that there is some integer $n$ so that the composition
 	$$
 		\overbrace{f_a \circ \dots \circ f_a}^{n-\text{times}} = \text{id}.
 	$$
 	Yet, this means that $a^n$ must be an identity of $R$ - hence $a^n$ must be the identity of $R$ by uniqueness.\\
 	\\
-	With $a$ still arbitrary, we identify that $a^n = a^{n-1}a = 1_R$, hence every nonzero element of $R$ has an inverse. Thus $R$ is a division ring.
+	With $a$ still arbitrary, we identify that $a^n = a^{n-1}a = aa^{n-1} = 1_R$, hence every nonzero element of $R$ has an inverse. Thus $R$ is a division ring.
 \end{solution}
 
 
@@ -148,7 +148,7 @@
 		$R$ has no zero divisors.
 	\end{lightgraybox}
 	\begin{solution}
-		content...
+		Let $a,c \in R$ with $a$ nonzero. Suppose $ac = 0$; we show that $c = 0$. By hypothesis, there exists a unique $b \in R$ such that $aba = a$. Since $ac = 0$ it follows immediately that $aca = 0$, hence $aca + aba = a$. But then $a(c + b)a = a$. However, $b$ is the \textit{unique} element in $R$ such that $aba = a$, therefore $c + b = b$ which implies $c = 0$. Hence $R$ has no zero divisors.
 	\end{solution}
 	
 	\item
@@ -156,7 +156,7 @@
 		$bab = b$.
 	\end{lightgraybox}
 	\begin{solution}
-		content...
+		With $a, b \in R$ nonzero such that $aba = a$, we have $babab = bab$. Thus $babab - bab = 0$ so $ba(bab - b) = 0$. Since $R$ has no zero divisors, $ba \neq 0$, hence $bab - b = 0 \implies b = bab$.
 	\end{solution}
 	
 	\item
@@ -164,7 +164,7 @@
 		$R$ has an identity.
 	\end{lightgraybox}
 	\begin{solution}
-		content...
+		Let $a, b \in R$ with $a$ and $b$ both nonzero and $b$ the unique element such that $aba = a$. We show that $ab$ is a multiplicative identity in $R$. Let $x \in R$. The closure properties of a ring imply the existence of a $y \in R$ so that $abx = y$. Then $abx + aba = y + a$ so $ab(x + a) = y + a$; which, due to the lack of zero divisors in $R$, implies that $x + a = y + a \implies x = y$, so $ab$ is a left identity. That $ab$ is a right identity is shown similarly by having $xab = y, xab + bab = y + b \implies x = y$. Hence $R$ has identity.
 	\end{solution}
 	
 	\item
@@ -172,7 +172,7 @@
 		$R$ is a division ring.
 	\end{lightgraybox}
 	\begin{solution}
-		content...
+		Given a nonzero element $a \in R$ we have a unique $b \in R$ such that $aba = a$. Then $aba - a = 0 \implies a(ba - 1_R) = 0 \implies ba = 1_R$, and so $a$ is left invertible. Similarly, $aba - a = 0 \implies (ab - 1_R)a = 0 \implies ab = 1_R$ and so $a$ is right invertible. Thus $R$ is a division ring.
 	\end{solution}
 \end{enumerate}
 
